@@ -1,0 +1,20 @@
+import React from 'react';
+import * as stream from "stream";
+
+type ButtonPropsType={
+    name: string,
+    callBack:()=>void
+}
+
+
+
+export const Button = (props: ButtonPropsType) => {
+    const onClickButtonHandler =()=>{
+        props.callBack()
+    }
+
+    return (
+        <button onClick={onClickButtonHandler}>{props.name}</button>
+    );
+};
+
